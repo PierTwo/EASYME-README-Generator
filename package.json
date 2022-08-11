@@ -1,14 +1,23 @@
 {
-  "name": "static-site",
+  "name": "easyme-readme-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A CLI node app to easily generate a README.md for your project!",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierTwo/EASYME-README-Generator.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "inquirer": "8.2.4"
-  }
+  "bugs": {
+    "url": "https://github.com/PierTwo/EASYME-README-Generator/issues"
+  },
+  "homepage": "https://github.com/PierTwo/EASYME-README-Generator#readme"
 }
