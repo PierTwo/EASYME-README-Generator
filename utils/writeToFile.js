@@ -1,0 +1,1 @@
+function writeToFile(fileName, data) { }
