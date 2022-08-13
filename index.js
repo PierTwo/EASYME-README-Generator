@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
 const questionsModule = require('./utils/questions');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 const questions = questionsModule.questions;
-// TODO: Create a function to initialize app
-async function init() {
+
+function init() {
     inquirer.prompt([
         {
             type: 'confirm',
@@ -72,9 +72,30 @@ async function init() {
             message: questions[10],
             name: 'contribution',
         },
+        {
+            type: 'input',
+            message: questions[11],
+            name: 'collaborators',
+        },
+        {
+            type: 'input',
+            message: questions[12],
+            name: 'assets',
+        },
+        {
+            type: 'input',
+            message: questions[13],
+            name: 'contact',
+        },
+        {
+            type: 'list',
+            message: questions[14],
+            name: 'license',
+            choices: questionsModule.choices,
+        },
     ])
         .then((response) => {
-            console.log(response)
+            generateMarkdown(response);
         });
 };
 

@@ -10,13 +10,15 @@ const questions = [
     'How do you use this Project?',
     'How can you test this project?',
     'How can others contribute to this project?',
-    'Enter a collaborator name followed by a URL then continue, if left blank app will go to the next section.',
-    'Enter a third-party asset name followed by a URL then continue, if left blank app will go to the next section.',
+    'Please enter the GitHub username of each collaborator:',
+    'Please enter the name of each third-party asset:',
     'Please enter your GitHub username followed by your email:',
     'What, if any, license do you want to include?'
-
 ];
 
+const choices = ['MIT', 'GPLv2', 'Apache 2.0', 'GPLv3', 'None'];
+
 module.exports = {
-    questions
+    questions,
+    choices,
 };
