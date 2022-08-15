@@ -26,7 +26,7 @@ async function init() {
         {
             type: 'confirm',
             message: questions[1],
-            name: 'tableOfContent',
+            name: 'tableOfContents',
         },
         {
             type: 'input',
