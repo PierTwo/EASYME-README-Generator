@@ -1,10 +1,11 @@
 const questionsModule = require('./utils/questions');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
+const writeToFile = require('./utils/writeToFile');
 
 const questions = questionsModule.questions;
 
-function init() {
+async function init() {
     inquirer.prompt([
         {
             type: 'confirm',
@@ -85,7 +86,7 @@ function init() {
         {
             type: 'input',
             message: questions[13],
-            name: 'contact',
+            name: 'questionContact',
         },
         {
             type: 'list',
@@ -95,7 +96,8 @@ function init() {
         },
     ])
         .then((response) => {
-            generateMarkdown(response);
+            const data = generateMarkdown(response);
+            writeToFile(response.title, data);
         });
 };
 
