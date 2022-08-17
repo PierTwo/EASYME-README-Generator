@@ -1,11 +1,15 @@
-const questionsModule = require('./utils/questions');
+// Import the required modules
 const inquirer = require('inquirer');
+const questionsModule = require('./utils/questions');
 const generateMarkdown = require('./utils/generateMarkdown');
 const writeToFile = require('./utils/writeToFile');
 
+// Creates a variable of the questions array from the questionsModule
 const questions = questionsModule.questions;
 
-async function init() {
+// Function to initialize app with inquirer questions
+function init() {
+    // First inquirer prompt to confirm user wants to continue with app
     inquirer.prompt([
         {
             type: 'confirm',
@@ -13,6 +17,7 @@ async function init() {
             name: 'continue',
         },
     ])
+        // Then use the inquirer response to check if the user does not want to continue if so exit and print goodbye otherwise call the main prompts
         .then((response) => {
             if (!response.continue) {
                 console.log('Goodbye!');
@@ -21,7 +26,7 @@ async function init() {
                 mainPrompts();
             };
         });
-
+    // Function to ask the main questions of the app for generating the markdown file
     const mainPrompts = () => inquirer.prompt([
         {
             type: 'confirm',
@@ -86,7 +91,7 @@ async function init() {
         {
             type: 'input',
             message: questions[13],
-            name: 'questionContact',
+            name: 'contact',
         },
         {
             type: 'list',
@@ -96,7 +101,9 @@ async function init() {
         },
     ])
         .then((response) => {
+            // Then create a variable to equal to the generateMarkdown function and pass to the function the inquirer response
             const data = generateMarkdown(response);
+            // Call writeToFile and pass to it the title response and the data variable which returns the markdown variable from the generateMarkdown function
             writeToFile(response.title, data);
         });
 };

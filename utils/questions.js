@@ -1,3 +1,4 @@
+// Creates an array of questions for inquirer to use
 const questions = [
     'Welcome to EASYME! Please leave any sections blank that you do not wish to include.\n------------------------------\nDo you want to continue?',
     'Do you want to include a table of contents?',
@@ -16,8 +17,10 @@ const questions = [
     'What, if any, license do you want to include?'
 ];
 
+// Creates an array of choices for the license question
 const choices = ['MIT', 'GPLv2', 'Apache 2.0', 'GPLv3', 'None'];
 
+// Modularize and export the questions and choices array
 module.exports = {
     questions,
     choices,
