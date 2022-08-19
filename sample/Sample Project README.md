@@ -1,10 +1,10 @@
-# Sample Project
+# Sample Project README
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://choosealicense.com/licenses/apache-2.0/)
 
 ## Description
 
-This is a sample project.
+This is a sample project README.
 
 ## Table of Contents
 
@@ -16,11 +16,11 @@ This is a sample project.
 
 ## Installation
 
-No need to install anything.
+No installation required
 
 ## Usage
 
-This is a sample, this project does not do anything.
+This project does not do anything.
 
 ## Credits
 
@@ -28,11 +28,13 @@ This is a sample, this project does not do anything.
 
 - GitHub: [PierTwo](https://github.com/PierTwo)
 - GitHub: [PierTwo](https://github.com/PierTwo)
+- GitHub: [PierTwo](https://github.com/PierTwo)
 
 #### Third-Party Assets
 
 - jQuery
-- Bootstrap
+- Boostrap
+- Inquirer
 
 ## License
 

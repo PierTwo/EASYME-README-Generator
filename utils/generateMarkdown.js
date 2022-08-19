@@ -52,7 +52,7 @@ function renderLicenseSection(license) {
   if (license === 'None') {
     markdown += `This project is not licensed.${blankLine}`
   } else {
-    markdown += `This Project is licensed with ${license} for more info please refer to license link or the LICENSE.md${blankLine}`;
+    markdown += `This Project is licensed with ${license} for more info please refer to the license link or the LICENSE.md${blankLine}`;
   };
   // Calls the renderLicenseLink to render the link to the license and pass it the license argument as a parameter
   renderLicenseLink(license)
